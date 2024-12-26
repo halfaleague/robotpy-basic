@@ -97,7 +97,6 @@ class MyRobot(wpilib.TimedRobot):
         else:
             self.motor.set(0)
 
-
         # TODO encoder
         # import phoenix6 as p6 
         # x = p6.hardware.CANcoder(12)
