@@ -21,6 +21,14 @@ class MyRobot(wpilib.TimedRobot):
         # self.container = RobotContainer()
         self.manual_test_init()
 
+
+        # Initialize the Xbox controller
+        self.controller = CommandXboxController(0)
+
+        # Bind A button to an ExampleCommand
+        self.controller.A().whileHeld(ExampleCommand())
+
+
     def manual_test_init(self):
         self.driverController = wpilib.XboxController(0)
         self.autonomousCommand = None
