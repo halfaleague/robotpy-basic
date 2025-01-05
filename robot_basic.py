@@ -4,8 +4,20 @@ import time
 import wpilib
 import wpilib.drive
 import rev
+import navx
 
 import phoenix6
+
+
+
+# TODO 
+
+# commands:
+# https://github.com/robotpy/examples/blob/main/ArmBot/robotcontainer.py
+
+# navx
+
+# network tables
 
 
 class MyRobot(wpilib.TimedRobot):
@@ -16,6 +28,7 @@ class MyRobot(wpilib.TimedRobot):
         """
         self.controller = wpilib.XboxController(0)
 
+        self.gyro = navx.AHRS.create_i2c()
 
         driveMotorChannel = 11
         self.drive11 = rev.SparkMax(driveMotorChannel, rev.SparkMax.MotorType.kBrushless)
@@ -38,6 +51,7 @@ class MyRobot(wpilib.TimedRobot):
         #self.drive.set(abs(val))
         #abs_pos  = self.cancoder12.get_absolute_position()
         #abs_pos.value
+        #self.gyro.getAngle()
 
         e = (int(time.time()) % 2) == 0
         if e:
