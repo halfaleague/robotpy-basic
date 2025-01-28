@@ -1,11 +1,12 @@
 
-pip install robotpy==2025.0.0b3 \
+pip install robotpy==2025.0.0b3   
 
 Windows:
-python -m robotpy sync \ 
-python -m robotpy deploy --skip-tests \
+python -m robotpy sync   
+python -m robotpy deploy --skip-tests   
 
-Linux: \
+Linux:   
+robotpy sync   
 robotpy deploy
 
 
